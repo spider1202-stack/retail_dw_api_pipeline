@@ -13,8 +13,16 @@ This project builds a full **API-based Data Warehouse** with a **star schema** d
   - Random User API (Customers)  
 - **ETL Concepts:** Star schema, Fact & Dimension tables, Date dimension  
 
----
+--
+## How to config database 
 
+create database name "retail_dw" in pgAdmin
+conn = psycopg2.connect(
+    host="localhost",
+    database="retail_dw",   # must match the database you created
+    user="postgres",        # your PostgreSQL username
+    password="your PostgreSQL password"        # your PostgreSQL password
+)
 ## Project Architecture
 
 ---
@@ -28,3 +36,4 @@ python -m venv .venv
 .venv\Scripts\activate   # Windows
 pip install -r requirements.txt
 python etl_api.py
+
